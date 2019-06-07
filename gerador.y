@@ -30,20 +30,24 @@
     Atributos gera_codigo_atomo(Atributos s1);
     Atributos gera_ultimo_elemento(Atributos s1);
     Atributos gera_lista_vazia();
-    Atributos gera_novo_elemento(Atributos s1, Atributos s2);
+    Atributos gera_novo_elemento(Atributos s1, Atributos s3);
     Atributos gera_subLista(Atributos s1);
 }%
 
-%start s1
+%start S
 
 %token ATOMO
 
 %%
 
-S   : L 
+S   : L
+    | N
     ;
 
-L   : '(' LE ')' {$$ = S2;}
+N   : F ',' LE ',' F
+    ;
+
+L   : '(' LE ')' {$$ = $2;}
     | '(' ')'    {$$ = gera_lista_vazia();}
     ;
 
@@ -52,7 +56,10 @@ LE  : E ',' LE   {$$ = gera_novo_elemento($1, $3);}
     ;
 
 E   : L          {$$ = gera_subLista($1);}
-    | ATOMO      {$$ = gera_codigo_atomo($1);}
+    | F
+    ;
+
+F   : ATOMO      {$$ = gera_codigo_atomo($1);}
     ;
 
 %%
