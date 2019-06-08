@@ -1,5 +1,5 @@
 %{
-int trataLexema( int token );
+	int trataLexema( int token );
 %}
 
 DIGITO  [0-9]
@@ -21,12 +21,12 @@ OPR	[(),]
             
 .        { coluna++; 
            yylval.head = yytext; 
-           yyerror( "Caractere inválido!\n" ); }
+           yyerror( "Caractere invalido!\n" ); }
 %% 
 
 int trataLexema( int token ) {
-  yylval.head = yytext; 
-  coluna += strlen(yytext); 
-  
-  return token;
+	yylval.head = yytext; 
+	coluna += strlen(yytext); 
+
+	return token;
 }
