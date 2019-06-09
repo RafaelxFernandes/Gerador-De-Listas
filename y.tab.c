@@ -397,18 +397,18 @@ union yyalloc
 #endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
-#define YYFINAL  13
+#define YYFINAL  12
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   13
+#define YYLAST   12
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  7
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  7
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  13
+#define YYNRULES  12
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  20
+#define YYNSTATES  18
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
@@ -455,7 +455,7 @@ static const yytype_uint8 yytranslate[] =
 static const yytype_uint8 yyrline[] =
 {
        0,    48,    48,    49,    52,    53,    56,    57,    60,    61,
-      64,    65,    68,    69
+      64,    65,    68
 };
 #endif
 
@@ -478,10 +478,10 @@ static const yytype_uint16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF -14
+#define YYPACT_NINF -9
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-14)))
+  (!!((Yystate) == (-9)))
 
 #define YYTABLE_NINF -1
 
@@ -492,8 +492,8 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-       2,   -14,    -3,     6,   -14,   -14,     4,     3,   -14,   -14,
-       5,     8,   -14,   -14,     2,   -14,   -14,     2,   -14,   -14
+       1,    -9,    -3,     8,    -9,    -9,     5,    -9,    -9,    -5,
+       6,    -9,    -9,     1,    -9,     1,    -9,    -9
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -501,20 +501,20 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       0,    12,     0,     0,     3,     2,     5,    12,     7,    10,
-       0,     9,    11,     1,     0,    13,     6,     0,     4,     8
+       0,    12,     0,     0,     3,     2,     5,     7,    10,     0,
+       9,    11,     1,     0,     6,     0,     4,     8
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -14,   -14,   -14,    10,   -13,   -14,    13
+      -9,    -9,    -9,    11,    -8,    -9,    12
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     3,     4,     9,    10,    11,    12
+      -1,     3,     4,     8,     9,    10,    11
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -522,36 +522,36 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       7,    18,     2,     8,    19,     1,    13,     2,    14,    15,
-       5,    16,    17,     6
+       1,    14,     2,     7,     1,    16,     2,    17,    12,    13,
+      15,     5,     6
 };
 
 static const yytype_uint8 yycheck[] =
 {
-       3,    14,     5,     6,    17,     3,     0,     5,     4,     6,
-       0,     6,     4,     0
+       3,     6,     5,     6,     3,    13,     5,    15,     0,     4,
+       4,     0,     0
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,     3,     5,     8,     9,    10,    13,     3,     6,    10,
-      11,    12,    13,     0,     4,     6,     6,     4,    11,    11
+       0,     3,     5,     8,     9,    10,    13,     6,    10,    11,
+      12,    13,     0,     4,     6,     4,    11,    11
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
        0,     7,     8,     8,     9,     9,    10,    10,    11,    11,
-      12,    12,    13,    13
+      12,    12,    13
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     1,     1,     3,     1,     3,     2,     3,     1,
-       1,     1,     1,     3
+       1,     1,     1
 };
 
 
@@ -1239,45 +1239,45 @@ yyreduce:
 #line 1240 "y.tab.c" /* yacc.c:1646  */
     break;
 
+  case 4:
+#line 52 "gerador.y" /* yacc.c:1646  */
+    {(yyval) = gera_novo_elemento((yyvsp[-2]), (yyvsp[0]));}
+#line 1246 "y.tab.c" /* yacc.c:1646  */
+    break;
+
   case 6:
 #line 56 "gerador.y" /* yacc.c:1646  */
     {(yyval) = (yyvsp[-1]);}
-#line 1246 "y.tab.c" /* yacc.c:1646  */
+#line 1252 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 57 "gerador.y" /* yacc.c:1646  */
     {(yyval) = gera_lista_vazia();}
-#line 1252 "y.tab.c" /* yacc.c:1646  */
+#line 1258 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 60 "gerador.y" /* yacc.c:1646  */
     {(yyval) = gera_novo_elemento((yyvsp[-2]), (yyvsp[0]));}
-#line 1258 "y.tab.c" /* yacc.c:1646  */
+#line 1264 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 61 "gerador.y" /* yacc.c:1646  */
     {(yyval) = gera_ultimo_elemento((yyvsp[0]));}
-#line 1264 "y.tab.c" /* yacc.c:1646  */
+#line 1270 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 64 "gerador.y" /* yacc.c:1646  */
     {(yyval) = gera_subLista((yyvsp[0]));}
-#line 1270 "y.tab.c" /* yacc.c:1646  */
+#line 1276 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
 #line 68 "gerador.y" /* yacc.c:1646  */
     {(yyval) = gera_codigo_atomo((yyvsp[0]));}
-#line 1276 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 13:
-#line 69 "gerador.y" /* yacc.c:1646  */
-    {(yyval) = gera_codigo_atomo((yyvsp[-1]));}
 #line 1282 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1510,7 +1510,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 72 "gerador.y" /* yacc.c:1906  */
+#line 71 "gerador.y" /* yacc.c:1906  */
 
 
 #include "lex.yy.c"
@@ -1526,7 +1526,6 @@ Atributos gera_subLista(Atributos s1){
                 + ss.head + "->valorSublista = " 
                 + s1.head + ";\n";
             
-
     return ss;
 }
 
@@ -1537,7 +1536,6 @@ Atributos gera_novo_elemento(Atributos s1, Atributos s3){
                 + s1.head + "->proximo = " 
                 + s3.head + ";\n\n"
                 + s3.codigo;
-
     ss.head = s1.head;
 
     return ss;
@@ -1563,18 +1561,18 @@ Atributos gera_lista_vazia(){
 Atributos gera_codigo_atomo(Atributos s1){
     Atributos ss;
 
-    ss.head = "l" + to_string(numeroNos++);
+    ss.head = " l" + to_string(numeroNos++);
 
     ss.codigo = ss.head + "->sublista = false;\n"
                 + ss.head + "->valorString = \"" 
                 + s1.head + "\";\n"
-                + ss.head + "->valorSublista = nullptr;\n";
+                + ss.head + "->valorSublista = nullptr;\n"
+                + ss.head + "->proximo = nullptr;\n";
     
     return ss;
 }
 
 void imprime_saida(Atributos s1){
-
     cout << "#include <string>" << endl
          << endl
          << "using namespace std;" << endl
@@ -1584,18 +1582,17 @@ void imprime_saida(Atributos s1){
          << "  string valorString;" << endl
          << "  Lista *valorSublista;" << endl
          << "  Lista *proximo;" << endl
-         << "};" 
+         << "};\n" 
          << endl
          << "Lista* geraLista() {"
          << endl;
 
     for(int i = 0; i < numeroNos; i++){
-        cout << "l" << i << " = new Lista();\n";
+        cout << " Lista* l" << i << " = new Lista();\n";
     }
 
     cout << "\n" + s1.codigo << endl;
-
-    cout << "return " << s1.head << ";" << endl;
+    cout << " return " << s1.head << ";" << endl << "}" << endl;
 }
 
 void yyerror(const char* mensagem){
@@ -1603,8 +1600,7 @@ void yyerror(const char* mensagem){
 
     cout << "Linha " << linha
          << " , coluna " << coluna - yyleng
-         << endl;
-
+         << " , proximo a " << yytext << endl;
     exit(0);
 }
 

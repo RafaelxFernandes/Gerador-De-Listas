@@ -759,7 +759,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "gerador.l"
+#line 26 "gerador.l"
 ECHO;
 	YY_BREAK
 #line 766 "lex.yy.c"
@@ -1767,7 +1767,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 25 "gerador.l"
+#line 26 "gerador.l"
 
 
 int trataLexema( int token ) {

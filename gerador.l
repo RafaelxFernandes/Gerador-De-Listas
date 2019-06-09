@@ -22,6 +22,7 @@ OPR	[(),]
 .        { coluna++; 
            yylval.head = yytext; 
            yyerror( "Caractere invalido!\n" ); }
+
 %% 
 
 int trataLexema( int token ) {
