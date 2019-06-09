@@ -50,7 +50,6 @@ S   : L             {imprime_saida($1);}
     ;
 
 N   : E ',' LE      {$$ = gera_novo_elemento($1, $3);}
-    | E
     ;
 
 L   : '(' LE ')'    {$$ = $2;}
@@ -62,10 +61,7 @@ LE  : E ',' LE      {$$ = gera_novo_elemento($1, $3);}
     ;
 
 E   : L             {$$ = gera_subLista($1);}
-    | F
-    ;
-
-F   : ATOMO         {$$ = gera_codigo_atomo($1);}
+    | ATOMO         {$$ = gera_codigo_atomo($1);}
     ;
 
 %%
