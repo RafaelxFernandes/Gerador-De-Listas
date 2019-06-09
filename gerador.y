@@ -49,8 +49,8 @@ S   : L             {imprime_saida($1);}
     | N             {imprime_saida($1);}
     ;
 
-N   : F ',' LE      {$$ = gera_novo_elemento($1, $3);}
-    | F
+N   : E ',' LE      {$$ = gera_novo_elemento($1, $3);}
+    | E
     ;
 
 L   : '(' LE ')'    {$$ = $2;}
@@ -118,7 +118,7 @@ Atributos gera_lista_vazia(){
 Atributos gera_codigo_atomo(Atributos s1){
     Atributos ss;
 
-    ss.head = " l" + to_string(numeroNos++);
+    ss.head = "l" + to_string(numeroNos++);
 
     ss.codigo = ss.head + "->sublista = false;\n"
                 + ss.head + "->valorString = \"" 
@@ -144,11 +144,11 @@ void imprime_saida(Atributos s1){
          << endl;
 
     for(int i = 0; i < numeroNos; i++){
-        cout << " Lista* l" << i << " = new Lista();\n";
+        cout << "Lista* l" << i << " = new Lista();\n";
     }
 
     cout << "\n" + s1.codigo << endl;
-    cout << " return " << s1.head << ";" << endl << "}" << endl;
+    cout << "  return " << s1.head << ";" << endl << "}" << endl;
 }
 
 void yyerror(const char* mensagem){
